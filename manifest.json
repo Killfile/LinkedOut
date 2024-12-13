@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name":"LinkedOut",
+    "version":"1.0",
+
+    "description": "Disables auto-following of companies when applying to jobs on LinkedIn",
+    "homepage_url": "htttp://cleaner.codes",
+
+    "icons": {
+        "48": "icons/linkedout.png"
+    },
+
+    "permissions": ["activeTab"],
+
+    "browser_action": {
+        "default_icon": "icons/smartapply-48.png",
+        "default_title": "LinkedOut"
+    },
+
+   
+    "content_scripts": [
+       
+        {
+            "matches": ["*://www.linkedin.com/jobs/*"],
+            "js": ["donotfollow.js"]
+        }
+             
+    ]
+}
